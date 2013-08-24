@@ -1,4 +1,4 @@
-<div>
-	<h3><%= mission.title %></h3>
-	<p><%= mission.statement %></p>
-</div>
+<ul data-role="listview" data-inset="true" data-divider-theme="a">
+	<li data-role="list-divider"><%=mission.title%></li>
+	<li data-icon="gear"><a href=""><%= mission.statement %></a></li>
+</ul>
