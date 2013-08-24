@@ -5,6 +5,11 @@ class MissionsController < ApplicationController
 		render :json => @missions
 	end
 
+	def show
+		mission = Mission.find(params[:id])
+		render :partial => 'show', :locals => {mission: mission}
+	end
+
 	private
 
 	def create_hash(missions)

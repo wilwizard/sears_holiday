@@ -1,5 +1,5 @@
 SearsHoliday::Application.routes.draw do
 
-  resources :missions, :only => :index
+  resources :missions, :only => [:index, :show]
 
 end
