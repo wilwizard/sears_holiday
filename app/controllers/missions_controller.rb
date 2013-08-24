@@ -2,7 +2,7 @@ class MissionsController < ApplicationController
 
 	def index
 		@missions = Mission.all
-		create_hash(@missions).to_json
+		render :json => @missions
 	end
 
 	private
