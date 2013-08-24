@@ -9,8 +9,8 @@ class MissionsController < ApplicationController
 	end
 
 	def list
-		missions = Mission.all
-		render_to_string :list, :layout => false, :locals => { missions: missions }
+		@missions = Mission.all
+		render :json => @missions, :partial => 'list', :locals => { :missions => @missions }
 	end
 
 
