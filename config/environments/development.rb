@@ -1,3 +1,5 @@
+# require 'yaml'
+
 SearsHoliday::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
@@ -34,4 +36,11 @@ SearsHoliday::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  yaml = YAML.load_file(File.join(Rails.root, 'keys.yaml'))
+
+  yaml.each do |key, value|
+    ENV[key] = value
+  end
+
 end

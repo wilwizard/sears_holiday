@@ -13,3 +13,6 @@ end
 gem 'jquery-rails'
 gem 'jquery_mobile_rails'
 gem 'faker'
+gem 'typhoeus'
+gem 'klout'
+
