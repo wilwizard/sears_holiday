@@ -1,8 +1,6 @@
 class MissionsController < ApplicationController
 
 	def index
-		missions = Mission.all
-		render :missions, layout: false, :locals => { missions: missions }
 	end
 
 	def show
@@ -12,7 +10,7 @@ class MissionsController < ApplicationController
 
 	def list
 		missions = Mission.all
-		render :list, :layout => false, :locals => { missions: missions }
+		render_to_string :list, :layout => false, :locals => { missions: missions }
 	end
 
 
