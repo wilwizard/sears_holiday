@@ -15,7 +15,7 @@
 //= require_tree .
 //
 
-var host = 'http://opration-sears.herokuapp.com';//'http://192.168.3.135:3000';
+var host = 'http://operation-sears.herokuapp.com';//'http://192.168.3.135:3000';
 var searsStores = null;
 /// Stores 
 
