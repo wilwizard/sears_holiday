@@ -15,4 +15,8 @@ gem 'jquery_mobile_rails'
 gem 'faker'
 gem 'typhoeus'
 gem 'klout'
+gem 'nokogiri'
 
+gem 'bcrypt-ruby', '~> 3.0.0'
+
+gem 'awesome_print', '~> 1.1.0'

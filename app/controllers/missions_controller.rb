@@ -1,6 +1,7 @@
 class MissionsController < ApplicationController
 
 	def index
+		#render :partial => 'show', :locals => { mission: mission }
 	end
 
 	def show
@@ -12,8 +13,4 @@ class MissionsController < ApplicationController
 		@missions = Mission.all
 		render :json => @missions, :partial => 'list', :locals => { :missions => @missions }
 	end
-
-
-	
-
 end

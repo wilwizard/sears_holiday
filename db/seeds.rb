@@ -1,8 +1,8 @@
 Mission.destroy_all
 User.destroy_all
 
-100.times do 
-	Mission.create(:statement => Faker::Lorem.sentence(5),
-									    :info => Faker::Lorem.sentence(12),
-									   :title => Faker::Lorem.sentence(3))
+File.foreach(File.join(Rails.root, 'missions.csv')) do |mission|
+	Mission.create(:statement => mission.chomp, :title => Faker::Lorem.words(3))
 end
+
+User.create(:email => 'wilwizard4@gmail.com', :password => 'password', :password_confirmation => 'password')

@@ -22,13 +22,14 @@ function megajax(url, uri, callback, mode, xData, loading) {
     cache: false,
     data: pData,
     success: function(jencoded) {
+			console.log(jencoded);
       if (loadingFlag == true) {
         //hideLoading();
       }
       if (jencoded.errcode > 0) {
         jAlert("Error", jencoded.errmsg, true);
       } else {
-        if (callback != null && callback != undefined && (jencoded.data != undefined || jencoded.data != null )) {
+        if (callback != null && callback != undefined ) {
           if (jencoded.data != null && jencoded.data != undefined) {
             callback(jencoded.data);
           } else {
@@ -39,7 +40,7 @@ function megajax(url, uri, callback, mode, xData, loading) {
     },
     failure: function(e) {
       //hideLoading();
-      jAlert("Communications failure", e, true);
+      console.log('Error');
     }
   });
 }
